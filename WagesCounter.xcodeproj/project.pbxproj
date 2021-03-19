@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82D7ED6F7E052EA4C590082D /* Pods_WagesCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */; };
 		89D8EB6C2604EB2C0046D14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D8EB6B2604EB2C0046D14F /* AppDelegate.swift */; };
 		89D8EB6E2604EB2C0046D14F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D8EB6D2604EB2C0046D14F /* SceneDelegate.swift */; };
 		89D8EB702604EB2C0046D14F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D8EB6F2604EB2C0046D14F /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagesCounter.release.xcconfig"; path = "Target Support Files/Pods-WagesCounter/Pods-WagesCounter.release.xcconfig"; sourceTree = "<group>"; };
+		39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagesCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D8EB682604EB2C0046D14F /* WagesCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WagesCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D8EB6B2604EB2C0046D14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D8EB6D2604EB2C0046D14F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		89D8EB742604EB2D0046D14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89D8EB772604EB2D0046D14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89D8EB792604EB2D0046D14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB7A80D2D24A5E6208F04892 /* Pods-WagesCounter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagesCounter.debug.xcconfig"; path = "Target Support Files/Pods-WagesCounter/Pods-WagesCounter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D7ED6F7E052EA4C590082D /* Pods_WagesCounter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AA930F61171EB87E99B5E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB7A80D2D24A5E6208F04892 /* Pods-WagesCounter.debug.xcconfig */,
+				0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		89D8EB5F2604EB2C0046D14F = {
 			isa = PBXGroup;
 			children = (
 				89D8EB6A2604EB2C0046D14F /* WagesCounter */,
 				89D8EB692604EB2C0046D14F /* Products */,
+				4AA930F61171EB87E99B5E3A /* Pods */,
+				BE71DE7530619EFDB25B3B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = WagesCounter;
 			sourceTree = "<group>";
 		};
+		BE71DE7530619EFDB25B3B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89D8EB7C2604EB2D0046D14F /* Build configuration list for PBXNativeTarget "WagesCounter" */;
 			buildPhases = (
+				0E1CAE55E5CD93CC97529332 /* [CP] Check Pods Manifest.lock */,
 				89D8EB642604EB2C0046D14F /* Sources */,
 				89D8EB652604EB2C0046D14F /* Frameworks */,
 				89D8EB662604EB2C0046D14F /* Resources */,
+				13FD9F90863C49CAB2645DD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E1CAE55E5CD93CC97529332 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WagesCounter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13FD9F90863C49CAB2645DD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WagesCounter/Pods-WagesCounter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WagesCounter/Pods-WagesCounter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WagesCounter/Pods-WagesCounter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89D8EB642604EB2C0046D14F /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		89D8EB7D2604EB2D0046D14F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7A80D2D24A5E6208F04892 /* Pods-WagesCounter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		89D8EB7E2604EB2D0046D14F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
