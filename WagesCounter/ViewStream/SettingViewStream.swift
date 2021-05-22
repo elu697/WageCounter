@@ -15,11 +15,10 @@ protocol SettingViewStreamType: AnyObject {
 }
 
 final class SettingViewStream: UnioStream<SettingViewStream>, SettingViewStreamType {
-
-    convenience init(extra: Extra = .init()) {
+    convenience init(wage: Wage = .init()) {
         self.init(input: Input(),
                   state: State(),
-                  extra: extra)
+                  extra: Extra(wage: wage))
     }
 }
 
@@ -53,7 +52,7 @@ extension SettingViewStream {
     }
 
     struct Extra: ExtraType {
-
+        let wage: Wage
     }
 
     static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {

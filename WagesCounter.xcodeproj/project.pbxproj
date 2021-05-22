@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		82D7ED6F7E052EA4C590082D /* Pods_WagesCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */; };
+		893047C82659706800C522D2 /* SettingPickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893047C62659706800C522D2 /* SettingPickerTableViewCell.swift */; };
+		893047C92659706800C522D2 /* SettingPickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893047C72659706800C522D2 /* SettingPickerTableViewCell.xib */; };
 		8959EBF0265911F300239266 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EBEF265911F300239266 /* R.generated.swift */; };
 		8959EBF326591A1900239266 /* UIButtonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EBF226591A1900239266 /* UIButtonEx.swift */; };
 		8959EC5E26591F7200239266 /* Wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC5D26591F7200239266 /* Wage.swift */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagesCounter.release.xcconfig"; path = "Target Support Files/Pods-WagesCounter/Pods-WagesCounter.release.xcconfig"; sourceTree = "<group>"; };
 		39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagesCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		893047C62659706800C522D2 /* SettingPickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPickerTableViewCell.swift; sourceTree = "<group>"; };
+		893047C72659706800C522D2 /* SettingPickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingPickerTableViewCell.xib; sourceTree = "<group>"; };
 		8959EBEF265911F300239266 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8959EBF226591A1900239266 /* UIButtonEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonEx.swift; sourceTree = "<group>"; };
 		8959EC5D26591F7200239266 /* Wage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wage.swift; sourceTree = "<group>"; };
@@ -79,6 +83,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		893047BF26596E4A00C522D2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				89AE8875260A36F9007ED7BA /* HomeViewController.swift */,
+				89621D99261DA6D900529E52 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		893047C026596E5300C522D2 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				8959EC6F26593D5700239266 /* SettingViewController.swift */,
+				8959EC7526593D7000239266 /* SettingView.swift */,
+				893047C62659706800C522D2 /* SettingPickerTableViewCell.swift */,
+				893047C72659706800C522D2 /* SettingPickerTableViewCell.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		8984069626296D1E00C015EB /* ViewStream */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,10 +115,8 @@
 		89AE8857260A2C78007ED7BA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89AE8875260A36F9007ED7BA /* HomeViewController.swift */,
-				89621D99261DA6D900529E52 /* HomeView.swift */,
-				8959EC6F26593D5700239266 /* SettingViewController.swift */,
-				8959EC7526593D7000239266 /* SettingView.swift */,
+				893047BF26596E4A00C522D2 /* Home */,
+				893047C026596E5300C522D2 /* Setting */,
 				89AE887A260A3CA0007ED7BA /* SplashViewController.swift */,
 			);
 			path = View;
@@ -235,6 +257,7 @@
 			files = (
 				89D8EB782604EB2D0046D14F /* LaunchScreen.storyboard in Resources */,
 				89D8EB752604EB2D0046D14F /* Assets.xcassets in Resources */,
+				893047C92659706800C522D2 /* SettingPickerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +344,7 @@
 				89AE8887260A555A007ED7BA /* UIViewControllerEx.swift in Sources */,
 				89AE8878260A36F9007ED7BA /* HomeViewStream.swift in Sources */,
 				8959EC5E26591F7200239266 /* Wage.swift in Sources */,
+				893047C82659706800C522D2 /* SettingPickerTableViewCell.swift in Sources */,
 				8959EBF0265911F300239266 /* R.generated.swift in Sources */,
 				89AE887B260A3CA0007ED7BA /* SplashViewController.swift in Sources */,
 				8959EC6D26592D2F00239266 /* AppData.swift in Sources */,
@@ -466,7 +490,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
 				INFOPLIST_FILE = WagesCounter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,7 +511,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XKKKM86RN;
 				INFOPLIST_FILE = WagesCounter/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

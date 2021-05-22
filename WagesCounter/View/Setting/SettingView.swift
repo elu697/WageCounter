@@ -8,12 +8,24 @@
 import UIKit
 
 class SettingView: UIView {
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.backgroundColor = AppConstants.Color.BackGround
+        table.separatorColor = .black
+        table.tableFooterView = UIView()
+        return table
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubview(tableView)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {

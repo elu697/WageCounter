@@ -145,6 +145,26 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `SettingPickerTableViewCell`.
+    static let settingPickerTableViewCell = _R.nib._SettingPickerTableViewCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SettingPickerTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.settingPickerTableViewCell) instead")
+    static func settingPickerTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.settingPickerTableViewCell)
+    }
+    #endif
+
+    static func settingPickerTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingPickerTableViewCell? {
+      return R.nib.settingPickerTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingPickerTableViewCell
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -164,6 +184,23 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib {
+    struct _SettingPickerTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SettingPickerTableViewCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingPickerTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingPickerTableViewCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

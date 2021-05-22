@@ -66,8 +66,9 @@ final class HomeViewController: UINavigationController {
         
         output.openSettingVC
             .subscribe { [weak self] _ in
-                let vc = SettingViewController()
+                let vc = UINavigationController(rootViewController: SettingViewController())
                 vc.modalPresentationStyle = .formSheet
+
                 self?.present(vc, animated: true) {
                     self?.loadViewIfNeeded()
                 }
