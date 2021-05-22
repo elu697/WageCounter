@@ -15,17 +15,18 @@ protocol HomeViewStreamType: AnyObject {
 }
 
 final class HomeViewStream: UnioStream<HomeViewStream>, HomeViewStreamType {
-
-    convenience init(extra: Extra = .init()) {
+    convenience init(wage: Wage = .init()) {
         self.init(input: Input(),
                   state: State(),
-                  extra: extra)
+                  extra: Extra(wage: wage))
     }
 }
 
 extension HomeViewStream {
 
     struct Input: InputType {
+        let o2ButtonTap = PublishRelay<Void>()
+        let settingButtonTap = PublishRelay<Void>()
         /*
          *  EXAMPLE:
          *
@@ -34,6 +35,9 @@ extension HomeViewStream {
     }
 
     struct Output: OutputType {
+        let isWaging: Observable<Bool>
+        let updateWage: Observable<Wage>
+        let openSettingVC: Observable<Void>
         /*
          *  EXAMPLE:
          *
@@ -42,7 +46,7 @@ extension HomeViewStream {
     }
 
     struct State: StateType {
-
+        let isWaging = BehaviorRelay<Bool>(value: false)
         /*
          *  EXAMPLE:
          *
@@ -51,12 +55,36 @@ extension HomeViewStream {
     }
 
     struct Extra: ExtraType {
-
+        let wage: Wage
     }
 
     static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
 
         let state = dependency.state
+        let input = dependency.inputObservables
+        var wage = dependency.extra.wage
+        let clock = TimerUtil()
+
+        let isWaging = state.isWaging
+        let updateWage = BehaviorRelay<Wage>(value: wage)
+        let openSettingVC = input.settingButtonTap
+
+        input.o2ButtonTap
+            .map({ _ in !state.isWaging.value })
+            .bind(to: state.isWaging)
+            .disposed(by: disposeBag)
+
+        clock.clock
+            .filter({ isWaging.value })
+            .subscribe { _ in
+                wage.time += clock.interval
+                wage.wage += (Double(wage.hwage) * clock.interval / 3600.0)
+                updateWage.accept(wage)
+            }
+            .disposed(by: disposeBag)
+
+
+
         /*
          *  EXAMPLE:
          *
@@ -66,12 +94,8 @@ extension HomeViewStream {
          *      .disposed(by: disposeBag)
          */
 
-        return Output(
-            /*
-             * EXAMPLE:
-             *
-             * isEnabled: state.isEnabled.asObservable()
-             */
-            )
+        return Output(isWaging: isWaging.asObservable(),
+                      updateWage: updateWage.asObservable(),
+                      openSettingVC: openSettingVC.asObservable())
     }
 }

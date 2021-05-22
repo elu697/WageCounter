@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		82D7ED6F7E052EA4C590082D /* Pods_WagesCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */; };
 		8959EBF0265911F300239266 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EBEF265911F300239266 /* R.generated.swift */; };
+		8959EBF326591A1900239266 /* UIButtonEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EBF226591A1900239266 /* UIButtonEx.swift */; };
+		8959EC5E26591F7200239266 /* Wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC5D26591F7200239266 /* Wage.swift */; };
+		8959EC61265922D500239266 /* TimerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC60265922D500239266 /* TimerUtil.swift */; };
+		8959EC6D26592D2F00239266 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC6C26592D2F00239266 /* AppData.swift */; };
+		8959EC7126593D5700239266 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC6F26593D5700239266 /* SettingViewController.swift */; };
+		8959EC7226593D5700239266 /* SettingViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC7026593D5700239266 /* SettingViewStream.swift */; };
+		8959EC7626593D7000239266 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EC7526593D7000239266 /* SettingView.swift */; };
 		89621D9A261DA6D900529E52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89621D99261DA6D900529E52 /* HomeView.swift */; };
 		89AE885C260A2EE4007ED7BA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE885B260A2EE4007ED7BA /* RootViewController.swift */; };
 		89AE8877260A36F9007ED7BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE8875260A36F9007ED7BA /* HomeViewController.swift */; };
@@ -27,6 +34,13 @@
 		0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagesCounter.release.xcconfig"; path = "Target Support Files/Pods-WagesCounter/Pods-WagesCounter.release.xcconfig"; sourceTree = "<group>"; };
 		39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagesCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8959EBEF265911F300239266 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		8959EBF226591A1900239266 /* UIButtonEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonEx.swift; sourceTree = "<group>"; };
+		8959EC5D26591F7200239266 /* Wage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wage.swift; sourceTree = "<group>"; };
+		8959EC60265922D500239266 /* TimerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUtil.swift; sourceTree = "<group>"; };
+		8959EC6C26592D2F00239266 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		8959EC6F26593D5700239266 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8959EC7026593D5700239266 /* SettingViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewStream.swift; sourceTree = "<group>"; };
+		8959EC7526593D7000239266 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		89621D99261DA6D900529E52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89AE885B260A2EE4007ED7BA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		89AE8875260A36F9007ED7BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				89AE8876260A36F9007ED7BA /* HomeViewStream.swift */,
+				8959EC7026593D5700239266 /* SettingViewStream.swift */,
 			);
 			path = ViewStream;
 			sourceTree = "<group>";
@@ -78,6 +93,8 @@
 			children = (
 				89AE8875260A36F9007ED7BA /* HomeViewController.swift */,
 				89621D99261DA6D900529E52 /* HomeView.swift */,
+				8959EC6F26593D5700239266 /* SettingViewController.swift */,
+				8959EC7526593D7000239266 /* SettingView.swift */,
 				89AE887A260A3CA0007ED7BA /* SplashViewController.swift */,
 			);
 			path = View;
@@ -86,6 +103,7 @@
 		89AE8858260A2C80007ED7BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8959EC5D26591F7200239266 /* Wage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				89AE887F260A463A007ED7BA /* AppConstants.swift */,
+				8959EC60265922D500239266 /* TimerUtil.swift */,
+				8959EC6C26592D2F00239266 /* AppData.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -104,6 +124,7 @@
 				89AE8883260A4DB0007ED7BA /* UIColorEx.swift */,
 				89AE8886260A555A007ED7BA /* UIViewControllerEx.swift */,
 				89AE8889260A577F007ED7BA /* UINavigationControllerEx.swift */,
+				8959EBF226591A1900239266 /* UIButtonEx.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -288,14 +309,21 @@
 				89AE8884260A4DB0007ED7BA /* UIColorEx.swift in Sources */,
 				89D8EB6C2604EB2C0046D14F /* AppDelegate.swift in Sources */,
 				89AE8880260A463A007ED7BA /* AppConstants.swift in Sources */,
+				8959EC7626593D7000239266 /* SettingView.swift in Sources */,
+				8959EC7126593D5700239266 /* SettingViewController.swift in Sources */,
+				8959EC7226593D5700239266 /* SettingViewStream.swift in Sources */,
+				8959EC61265922D500239266 /* TimerUtil.swift in Sources */,
 				89621D9A261DA6D900529E52 /* HomeView.swift in Sources */,
 				89AE885C260A2EE4007ED7BA /* RootViewController.swift in Sources */,
 				89AE8877260A36F9007ED7BA /* HomeViewController.swift in Sources */,
+				8959EBF326591A1900239266 /* UIButtonEx.swift in Sources */,
 				89AE888A260A577F007ED7BA /* UINavigationControllerEx.swift in Sources */,
 				89AE8887260A555A007ED7BA /* UIViewControllerEx.swift in Sources */,
 				89AE8878260A36F9007ED7BA /* HomeViewStream.swift in Sources */,
+				8959EC5E26591F7200239266 /* Wage.swift in Sources */,
 				8959EBF0265911F300239266 /* R.generated.swift in Sources */,
 				89AE887B260A3CA0007ED7BA /* SplashViewController.swift in Sources */,
+				8959EC6D26592D2F00239266 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
