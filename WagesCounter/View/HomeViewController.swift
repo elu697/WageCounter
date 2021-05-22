@@ -13,7 +13,18 @@ import SnapKit
 final class HomeViewController: UINavigationController {
 
     let viewStream: HomeViewStreamType = HomeViewStream()
+    let homeView: HomeView = HomeView()
     private let disposeBag = DisposeBag()
+    
+    override func loadView() {
+        super.loadView()
+        view = homeView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.layoutIfNeeded()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

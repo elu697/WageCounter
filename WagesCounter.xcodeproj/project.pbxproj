@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		82D7ED6F7E052EA4C590082D /* Pods_WagesCounter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */; };
+		8959EBF0265911F300239266 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959EBEF265911F300239266 /* R.generated.swift */; };
+		89621D9A261DA6D900529E52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89621D99261DA6D900529E52 /* HomeView.swift */; };
 		89AE885C260A2EE4007ED7BA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE885B260A2EE4007ED7BA /* RootViewController.swift */; };
 		89AE8877260A36F9007ED7BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE8875260A36F9007ED7BA /* HomeViewController.swift */; };
 		89AE8878260A36F9007ED7BA /* HomeViewStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AE8876260A36F9007ED7BA /* HomeViewStream.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		0BB733DD772AF1C2DC758D0D /* Pods-WagesCounter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WagesCounter.release.xcconfig"; path = "Target Support Files/Pods-WagesCounter/Pods-WagesCounter.release.xcconfig"; sourceTree = "<group>"; };
 		39DEEB33B4DB73A56D9ED9BB /* Pods_WagesCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WagesCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8959EBEF265911F300239266 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		89621D99261DA6D900529E52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89AE885B260A2EE4007ED7BA /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		89AE8875260A36F9007ED7BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		89AE8876260A36F9007ED7BA /* HomeViewStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStream.swift; sourceTree = "<group>"; };
@@ -61,9 +65,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8984069626296D1E00C015EB /* ViewStream */ = {
+			isa = PBXGroup;
+			children = (
+				89AE8876260A36F9007ED7BA /* HomeViewStream.swift */,
+			);
+			path = ViewStream;
+			sourceTree = "<group>";
+		};
 		89AE8857260A2C78007ED7BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89AE8875260A36F9007ED7BA /* HomeViewController.swift */,
+				89621D99261DA6D900529E52 /* HomeView.swift */,
+				89AE887A260A3CA0007ED7BA /* SplashViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -73,16 +88,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		89AE8859260A2CA2007ED7BA /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				89AE8875260A36F9007ED7BA /* HomeViewController.swift */,
-				89AE8876260A36F9007ED7BA /* HomeViewStream.swift */,
-				89AE887A260A3CA0007ED7BA /* SplashViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		89AE887D260A4185007ED7BA /* Common */ = {
@@ -124,10 +129,11 @@
 		89D8EB6A2604EB2C0046D14F /* WagesCounter */ = {
 			isa = PBXGroup;
 			children = (
+				8959EBEF265911F300239266 /* R.generated.swift */,
 				89AE8882260A4D9F007ED7BA /* Extention */,
 				89AE887D260A4185007ED7BA /* Common */,
-				89AE8859260A2CA2007ED7BA /* Controller */,
 				89AE8858260A2C80007ED7BA /* Model */,
+				8984069626296D1E00C015EB /* ViewStream */,
 				89AE8857260A2C78007ED7BA /* View */,
 				89D8EB6B2604EB2C0046D14F /* AppDelegate.swift */,
 				89AE885B260A2EE4007ED7BA /* RootViewController.swift */,
@@ -154,6 +160,7 @@
 			buildConfigurationList = 89D8EB7C2604EB2D0046D14F /* Build configuration list for PBXNativeTarget "WagesCounter" */;
 			buildPhases = (
 				0E1CAE55E5CD93CC97529332 /* [CP] Check Pods Manifest.lock */,
+				8959EBE52659105400239266 /* ShellScript */,
 				89D8EB642604EB2C0046D14F /* Sources */,
 				89D8EB652604EB2C0046D14F /* Frameworks */,
 				89D8EB662604EB2C0046D14F /* Resources */,
@@ -252,6 +259,25 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WagesCounter/Pods-WagesCounter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8959EBE52659105400239266 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,11 +288,13 @@
 				89AE8884260A4DB0007ED7BA /* UIColorEx.swift in Sources */,
 				89D8EB6C2604EB2C0046D14F /* AppDelegate.swift in Sources */,
 				89AE8880260A463A007ED7BA /* AppConstants.swift in Sources */,
+				89621D9A261DA6D900529E52 /* HomeView.swift in Sources */,
 				89AE885C260A2EE4007ED7BA /* RootViewController.swift in Sources */,
 				89AE8877260A36F9007ED7BA /* HomeViewController.swift in Sources */,
 				89AE888A260A577F007ED7BA /* UINavigationControllerEx.swift in Sources */,
 				89AE8887260A555A007ED7BA /* UIViewControllerEx.swift in Sources */,
 				89AE8878260A36F9007ED7BA /* HomeViewStream.swift in Sources */,
+				8959EBF0265911F300239266 /* R.generated.swift in Sources */,
 				89AE887B260A3CA0007ED7BA /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

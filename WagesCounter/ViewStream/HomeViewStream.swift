@@ -26,7 +26,6 @@ final class HomeViewStream: UnioStream<HomeViewStream>, HomeViewStreamType {
 extension HomeViewStream {
 
     struct Input: InputType {
-
         /*
          *  EXAMPLE:
          *
@@ -35,7 +34,6 @@ extension HomeViewStream {
     }
 
     struct Output: OutputType {
-
         /*
          *  EXAMPLE:
          *
@@ -59,7 +57,6 @@ extension HomeViewStream {
     static func bind(from dependency: Dependency<Input, State, Extra>, disposeBag: DisposeBag) -> Output {
 
         let state = dependency.state
-
         /*
          *  EXAMPLE:
          *
@@ -75,6 +72,6 @@ extension HomeViewStream {
              *
              * isEnabled: state.isEnabled.asObservable()
              */
-        )
+            )
     }
 }

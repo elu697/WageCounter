@@ -6,6 +6,7 @@ target 'WagesCounter' do
   use_frameworks!
 
   # Pods for WagesCounter
+  pod 'R.swift'
   pod 'RxSwift', '~> 6.1'
   pod 'RxCocoa', '~> 6.1'
   pod 'SnapKit', '~> 5.0.0'

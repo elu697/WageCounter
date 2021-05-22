@@ -1,4 +1,7 @@
 PODS:
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - RxCocoa (6.1.0):
     - RxRelay (= 6.1.0)
     - RxSwift (= 6.1.0)
@@ -36,6 +39,7 @@ PODS:
     - RxSwift (~> 6.0)
 
 DEPENDENCIES:
+  - R.swift
   - RxCocoa (~> 6.1)
   - RxSwift (~> 6.1)
   - SnapKit (~> 5.0.0)
@@ -44,6 +48,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - R.swift
+    - R.swift.Library
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -60,6 +66,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/cats-oss/Unio.git
 
 SPEC CHECKSUMS:
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
@@ -67,6 +75,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   Unio: 6e57bd33dbcf38d281b0b420f75c0eae3bef0cf3
 
-PODFILE CHECKSUM: 645c478c4719fbbb91c9139794d0648fc9ad9604
+PODFILE CHECKSUM: 743420786e74b55220f8a70b72451dab8850fe01
 
 COCOAPODS: 1.7.5
